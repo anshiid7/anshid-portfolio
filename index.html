@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anshid M — Cyber Portfolio</title>
+    <meta name="description" content="A Cyber-themed, One-page Portfolio For Anshid M Featuring A Digital Glitch Hero, Glowing Neon Blue Details, Certifications, Projects, And Contact Form. Responsive, Modern, Tech-inspired.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b1a1c;
+            --primary-text-color: #f0f8ff;
+            --secondary-text-color: #9cdacb;
+            --accent-color: #00ffcc;
+            --divider-color: #152c2e;
+            --font-inter: 'Inter', sans-serif;
+            --border-radius: 12px;
+            --section-padding: 80px 20px;
+        }
+
+        @media (max-width: 809.98px) {
+            :root {
+                --section-padding: 40px 20px;
+            }
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a1c, #0d1e21);
+            color: var(--primary-text-color);
+            font-family: var(--font-inter);
+            margin: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: var(--section-padding);
+        }
+
+        .header {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 80px 0;
+        }
+
+        .header h1 {
+            font-size: clamp(36px, 6vw, 56px);
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: -0.04em;
+            color: var(--primary-text-color);
+            text-shadow: 0 0 15px rgba(0, 255, 204, 0.7);
+        }
+        
+        .header h2 {
+            font-size: clamp(24px, 4vw, 32px);
+            font-weight: 500;
+            color: var(--secondary-text-color);
+            margin: 0;
+            letter-spacing: -0.03em;
+        }
+
+        .header-action {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            border-radius: 100px;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+            transition: all 0.3s ease;
+        }
+        
+        .header-action:hover {
+            box-shadow: 0 0 20px var(--accent-color), 0 0 40px var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .hero-banner {
+            position: relative;
+            background: linear-gradient(45deg, var(--divider-color), #183d42);
+            border-radius: var(--border-radius);
+            margin-top: 40px;
+            aspect-ratio: 16 / 9;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border: 1px solid rgba(0, 255, 204, 0.3);
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.2);
+            text-align: center;
+        }
+
+        .hero-banner h1 {
+            font-family: monospace;
+            color: var(--accent-color);
+            font-size: clamp(24px, 4vw, 48px);
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+            animation: glitch 1.5s infinite;
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+        
+        .section-title {
+            text-align: left;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            text-shadow: 0 0 5px rgba(0, 255, 204, 0.5);
+        }
+
+        .content-block {
+            border-left: 2px solid var(--accent-color);
+            padding-left: 20px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .content-block h2 {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--secondary-text-color);
+            margin: 0;
+            padding-top: 10px;
+        }
+
+        .content-block h2 strong {
+            color: var(--primary-text-color);
+        }
+        
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .skill-item {
+            background: linear-gradient(145deg, var(--divider-color), #1f3638);
+            border: 1px solid rgba(0, 255, 204, 0.2);
+            border-radius: 8px;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex: 1 1 auto;
+            min-width: 150px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+        }
+        
+        .skill-item svg {
+            width: 32px;
+            height: 32px;
+            color: var(--accent-color);
+            fill: none;
+            stroke: var(--accent-color);
+            stroke-width: 1.5px;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .skill-item h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0;
+            color: var(--primary-text-color);
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="header">
+            <h1>ANSHID M</h1>
+            <h2>Aspiring Cybersecurity Analyst</h2>
+            <a href="Resume.pdf" class="header-action">Download Resume</a>
+        </div>
+        <div class="hero-banner">
+            <h1>>_ Access Granted</h1>
+        </div>
+
+        <!-- About Me Section -->
+        <div class="section">
+            <h1 class="section-title">About Me</h1>
+            <div class="content-block">
+                <h2>I am an aspiring cybersecurity professional with a deep passion for protecting digital environments and solving complex security challenges. My expertise spans both offensive (Red Team) and defensive (Blue Team) security, giving me a holistic understanding of cybersecurity from all angles.
+
+I have hands-on experience in bug bounty hunting, vulnerability assessment, threat detection, and penetration testing, developed through practical labs and real-world simulations on platforms like TryHackMe and Hack The Box. These experiences have sharpened my skills in identifying system weaknesses, analyzing threats, and implementing security measures to safeguard sensitive information.
+
+Beyond technical proficiency, I bring a proactive, analytical mindset and a constant drive to stay ahead of emerging threats and evolving technologies. I thrive in challenging environments where critical thinking and problem-solving are essential, and I am committed to building secure, resilient, and trustworthy digital systems.
+
+My goal is to continuously grow as a cybersecurity professional, applying my skills to real-world scenarios, contributing to the safety of digital infrastructures, and pushing the boundaries of what can be achieved in the field of cybersecurity.</h2>
+            </div>
+        </div>
+
+        <!-- Certifications Section -->
+        <div class="section">
+            <h1 class="section-title">Certifications</h1>
+            <div class="content-block">
+                <h2>
+        <strong>Google Cybersecurity Professional Certificate:</strong> 
+        Studied core security principles, the CIA triad, and risk management. 
+        Gained practical skills in Linux, SQL, network defense, security controls, SIEM monitoring, 
+        vulnerability assessment, and incident response.
+    </h2>
+    
+    <h2>
+        <strong>Cisco Ethical Hacker:</strong> 
+        Learned ethical hacking concepts, penetration testing methodologies, reconnaissance, vulnerability 
+        identification, and exploitation techniques, with a focus on securing digital systems.
+    </h2>
+    
+    <h2>
+        <strong>Cyber Security 101 (TryHackMe):</strong> 
+        Explored foundational security concepts, including malware, phishing, password attacks, and 
+        basic defense mechanisms. Built awareness of common threats and how attackers exploit them.
+    </h2>
+    
+    <h2>
+        <strong>Advent of Cyber 2024 (TryHackMe):</strong> 
+        Completed daily hands-on security challenges covering topics like web exploitation, privilege 
+        escalation, cryptography, incident response, and digital forensics.
+    </h2>
+    
+    <h2>
+        <strong>Pre Security (TryHackMe):</strong> 
+        Acquired strong basics in networking, Linux command line, web technologies, and security 
+        essentials required to transition into technical cybersecurity.
+    </h2>
+    
+    <h2>
+        <strong>Intro to Splunk (eLearning):</strong> 
+        Learned SIEM fundamentals, log collection, searching, and creating security alerts and 
+        dashboards for monitoring and detection.
+    </h2>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="section">
+            <h1 class="section-title">Education</h1>
+            <div class="content-block">
+                <h2><strong>Bachelor of Computer Applications (BCA)</strong><br>GEMS ASC RAMAPURAM, Malappuram, Kerala<br>2022 – 2025</h2>
+            </div>
+        </div>
+
+        <!-- Experience & Projects Section -->
+        <div class="section">
+            <h1 class="section-title">Experience & Projects</h1>
+            <div class="content-block">
+                <h2><strong>COOP FinTech:</strong> Developed a secure, full-stack fintech app using Java, PHP, and MySQL.</h2>
+                <h2><strong>Tata Group Simulation:</strong> Enhanced incident response and threat detection efficiency by 25%.</h2>
+                <h2><strong>Mastercard Virtual Simulation:</strong> Identified and documented phishing threats, boosting awareness rates by 30%.</h2>
+            </div>
+        </div>
+        
+        <!-- Tools & Skills Section -->
+        <div class="section">
+            <h1 class="section-title">Skills & Tools</h1>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M 16.5 6 L 16.5 0.75 C 16.5 0.336 16.164 0 15.75 0 L 0.75 0 C 0.336 0 0 0.336 0 0.75 L 0 6 C 0 15 8.25 17.25 8.25 17.25 C 8.25 17.25 16.5 15 16.5 6 Z" transform="translate(3.75 4.5)" stroke-width="1.5"/>
+                    </svg>
+                    <h3>Nmap</h3>
+                </div>
+                <div class="skill-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M 15 0 L 15 1.5 C 15 5.642 11.642 9 7.5 9 C 3.358 9 0 5.642 0 1.5 L 0 0 Z" transform="translate(4.5 12)"/>
+                        <path d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z" transform="translate(13.5 7.5)"/>
+                        <path d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z" transform="translate(8.25 7.5)"/>
+                        <path d="M 0 0 L 0 9" stroke-width="1.5" transform="translate(12 12)"/>
+                        <path d="M 15 10.5 C 15 14.642 11.642 18 7.5 18 C 3.358 18 0 14.642 0 10.5 L 0 7.5 C 0 3.358 3.358 0 7.5 0 C 11.642 0 15 3.358 15 7.5 Z" stroke-width="1.5"/>
+                        <path d="M 0 0 L 21 0" stroke-width="1.5" transform="translate(1.5 12)"/>
+                    </svg>
+                    <h3>Burp Suite</h3>
+                </div>
+                <div class="skill-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M 5.735 9.265 C 5.412 8.463 5.248 7.606 5.25 6.742 C 5.25 3.125 8.164 0.119 11.779 0.004 C 13.645 -0.058 15.454 0.655 16.775 1.976 C 18.096 3.296 18.811 5.105 18.75 6.971 C 18.631 10.586 15.625 13.5 12.008 13.5 C 11.144 13.502 10.287 13.338 9.485 13.015 L 9.485 13.015 L 8.25 14.25 L 6 14.25 L 6 16.5 L 3.75 16.5 L 3.75 18.75 L 0.75 18.75 C 0.336 18.75 0 18.414 0 18 L 0 15.31 C 0 15.112 0.079 14.921 0.219 14.781 Z" stroke-width="1.5"/>
+                        <path d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z" transform="translate(15.75 6)"/>
+                    </svg>
+                    <h3>Hydra</h3>
+                </div>
+                <div class="skill-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M 0.75 12 C 0.336 12 0 11.664 0 11.25 L 0 0.75 C 0 0.336 0.336 0 0.75 0 L 15.75 0 C 16.164 0 16.5 0.336 16.5 0.75 L 16.5 11.25 C 16.5 11.664 16.164 12 15.75 12 Z" stroke-width="1.5"/>
+                        <path d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z" transform="translate(10.875 13.125)"/>
+                        <path d="M 0 6.75 L 0 3.75 C 0 1.679 1.679 0 3.75 0 C 5.821 0 7.5 1.679 7.5 3.75 L 7.5 6.75" stroke-width="1.5" transform="translate(8.25 1.5)"/>
+                    </svg>
+                    <h3>Metasploit</h3>
+                </div>
+                <div class="skill-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M 4.498 17.999 C 4.083 17.999 3.748 17.663 3.748 17.249 L 3.748 13.246 C 2.645 13.768 1.328 13.461 0.569 12.506 C -0.19 11.55 -0.19 10.197 0.569 9.242 C 1.328 8.286 2.645 7.979 3.748 8.501 L 3.748 4.499 C 3.748 4.084 4.083 3.749 4.498 3.749 L 8.875 3.749 C 8.352 2.646 8.659 1.328 9.615 0.569 C 10.571 -0.19 11.924 -0.19 12.879 0.569 C 13.835 1.328 14.142 2.646 13.62 3.749 L 17.998 3.749 C 18.412 3.749 18.748 4.084 18.748 4.499 L 18.748 8.501 C 17.645 7.979 16.328 8.286 15.569 9.242 C 14.81 10.197 14.81 11.55 15.569 12.506 C 16.328 13.461 17.645 13.768 18.748 13.246 L 18.748 17.249 C 18.748 17.663 18.412 17.999 17.998 17.999 Z" stroke-width="1.5"/>
+                    </svg>
+                    <h3>John the Ripper</h3>
+                </div>
+                <div class="skill-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M 10.5 0 C 10.988 0.649 11.251 1.438 11.25 2.25 L 11.25 3 L 3.75 3 L 3.75 2.25 C 3.749 1.438 4.012 0.649 4.5 0 L 0.75 0 C 0.336 0 0 0.336 0 0.75 L 0 16.5 C 0 16.914 0.336 17.25 0.75 17.25 L 14.25 17.25 C 14.664 17.25 15 16.914 15 16.5 L 15 0.75 C 15 0.336 14.664 0 14.25 0 Z" stroke-width="1.5" transform="translate(4.5 3.75)"/>
+                    </svg>
+                    <h3>Gobuster</h3>
+                </div>
+                <div class="skill-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2L2 12h20zM2 12l10 10M22 12L12 22" stroke-width="1.5"/>
+                        <path d="M12 2l2 4M12 2l-2 4" stroke-width="1.5"/>
+                    </svg>
+                    <h3>Nikto</h3>
+                </div>
+                <div class="skill-item">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="3" y="11" width="18" height="10" rx="2" ry="2"/>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke-width="1.5"/>
+                    </svg>
+                    <h3>Hashcat</h3>
+                </div>
+                <div class="skill-item">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="3" y="6" width="18" height="15" rx="2" ry="2"/>
+                        <path d="M6 6v-2h6v2M12 6v-2h6v2" stroke-width="1.5"/>
+                    </svg>
+                    <h3>Dirb</h3>
+                </div>
+                <div class="skill-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2 10s4-8 10-8 10 8 10 8M5 14s2-4 7-4 7 4 7 4M8 18s1.5-3 4-3 4 3 4 3" stroke-width="1.5"/>
+                    </svg>
+                    <h3>Wi-Fi Hacking</h3>
+                </div>
+                <div class="skill-item">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="2" y="5" width="20" height="14" rx="2" ry="2"/>
+                        <path d="M6 9h8" stroke-width="1.5"/>
+                        <circle cx="4" cy="9" r="0.5"/>
+                        <path d="M6 13h8" stroke-width="1.5"/>
+                        <circle cx="4" cy="13" r="0.5"/>
+                        <path d="M6 17h6" stroke-width="1.5"/>
+                        <circle cx="4" cy="17" r="0.5"/>
+                    </svg>
+                    <h3>Shell Scripting</h3>
+                </div>
+                <div class="skill-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M 1.5 14.25 L 1.5 16.5 C 1.5 17.328 2.172 18 3 18 L 10.5 18 L 10.5 12" stroke-width="1.5" transform="translate(6 3)"/>
+                        <path d="M 13.5 12 C 13.5 13.933 11.933 15.5 10 15.5 C 8.067 15.5 6.5 13.933 6.5 12 C 6.5 10.067 8.067 8.5 10 8.5 C 11.933 8.5 13.5 10.067 13.5 12 Z" stroke-width="1.5" transform="translate(6 3)"/>
+                        <path d="M 1.5 12 L 1.5 7.5 C 1.5 6.672 2.172 6 3 6 L 10.5 6 L 10.5 12" stroke-width="1.5" transform="translate(6 3)"/>
+                        <path d="M 21.75 3.75 L 21.75 1.5 C 21.75 0.672 21.078 0 20.25 0 L 3.75 0 C 2.922 0 2.25 0.672 2.25 1.5 L 2.25 3.75" stroke-width="1.5" transform="translate(0 3)"/>
+                        <path d="M 18.75 18.75 C 18.75 18.059 18.191 17.5 17.5 17.5 L 6.5 17.5 C 5.809 17.5 5.25 18.059 5.25 18.75 C 5.25 19.441 5.809 20 6.5 20 L 17.5 20 C 18.191 20 18.75 19.441 18.75 18.75 Z" stroke-width="1.5" transform="translate(0 3)"/>
+                        <path d="M 0 0 L 18 0" stroke-width="1.5" transform="translate(3 21)"/>
+                        <path d="M 1.5 3.75 L 1.5 18.75" stroke-width="1.5" transform="translate(3 3)"/>
+                        <path d="M 18.75 3.75 L 18.75 18.75" stroke-width="1.5" transform="translate(3 3)"/>
+                    </svg>
+                    <h3>Linux</h3>
+                </div>
+                <div class="skill-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M 12 1.5 C 17.247 1.5 21.5 5.753 21.5 11 C 21.5 16.247 17.247 20.5 12 20.5 C 6.753 20.5 2.5 16.247 2.5 11 C 2.5 5.753 6.753 1.5 12 1.5 Z" stroke-width="1.5" transform="translate(1 1)"/>
+                        <path d="M 11.25 1.5 L 11.25 20.5" stroke-width="1.5" transform="translate(1 1)"/>
+                        <path d="M 1.5 11.25 L 20.5 11.25" stroke-width="1.5" transform="translate(1 1)"/>
+                        <path d="M 1.954 1.955 L 20.045 20.045" stroke-width="1.5" transform="translate(1 1)"/>
+                        <path d="M 20.046 1.954 L 1.955 20.045" stroke-width="1.5" transform="translate(1 1)"/>
+                    </svg>
+                    <h3>Python</h3>
+                </div>
+                <div class="skill-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M 0 0 L 18 0" stroke-width="1.5" transform="translate(3 2.25)"/>
+                        <path d="M 0 0 L 18 0" stroke-width="1.5" transform="translate(3 21.75)"/>
+                        <path d="M 0 0 L 0 19.5" stroke-width="1.5" transform="translate(3 2.25)"/>
+                        <path d="M 0 0 L 0 19.5" stroke-width="1.5" transform="translate(21 2.25)"/>
+                        <path d="M 0 0 L 9 0" stroke-width="1.5" transform="translate(7.5 6.75)"/>
+                        <path d="M 0 0 L 9 0" stroke-width="1.5" transform="translate(7.5 17.25)"/>
+                        <path d="M 4.5 0 L 4.5 10.5" stroke-width="1.5" transform="translate(3 6.75)"/>
+                        <path d="M 4.5 0 L 4.5 10.5" stroke-width="1.5" transform="translate(12 6.75)"/>
+                    </svg>
+                    <h3>Cryptography</h3>
+                </div>
+                <div class="skill-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M 0 5.25 L 9 10.5 L 18 5.25 L 9 0 Z" stroke-width="1.5"/>
+                        <path d="M 0 0 L 9 5.25 L 18 0" stroke-width="1.5" transform="translate(3 16.5)"/>
+                        <path d="M 0 0 L 9 5.25 L 18 0" stroke-width="1.5" transform="translate(3 12)"/>
+                    </svg>
+                    <h3>Networking</h3>
+                </div>
+                <div class="skill-item">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="10" cy="10" r="7"/>
+                        <path d="m15 15 6 6" stroke-width="1.5"/>
+                    </svg>
+                    <h3>Digital Forensics</h3>
+                </div>
+                <div class="skill-item">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10"/>
+                        <circle cx="12" cy="12" r="6"/>
+                        <path d="M12 2v20M2 12h20" stroke-width="1.5"/>
+                    </svg>
+                    <h3>Threat Hunting</h3>
+                </div>
+                <div class="skill-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3 3h18v18H3z"/>
+                        <path d="M12 3v18M3 12h18" stroke-width="1.5"/>
+                        <path d="m5 5 14 14m0-14L5 19" stroke-width="1.5"/>
+                    </svg>
+                    <h3>SQLMap</h3>
+                </div>
+                <div class="skill-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2v20" stroke-width="1.5"/>
+                        <path d="M7 17s3-4 5-4 5 4 5 4M5 13s3-4 7-4 7 4 7 4M3 9s4-4 9-4 9 4 9 4" stroke-width="1.5"/>
+                    </svg>
+                    <h3>Aircrack-ng</h3>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact Section -->
+        <div class="section">
+            <h1 class="section-title">Contact</h1>
+            <div class="content-block">
+                <h2>I am always open to new opportunities and collaborations. Feel free to connect with me!</h2>
+                <h2>
+                    <strong>Phone:</strong> +91 7012330394<br>
+                    <strong>Email:</strong> anshidm.connect@gmail.com<br>
+                    <strong>LinkedIn:</strong> linkedin.com/in/anshidm
+                </h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
